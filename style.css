@@ -11,6 +11,12 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+}
+
 header {
   font-size: 1.5rem;
 }
@@ -137,4 +143,37 @@ select {
 .select:hover::after {
   background: white;
   color: #ff6f47;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 489px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .todo-input {
+    width: calc(100vw - 85px);
+  }
+
+  .select {
+    width: 95%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-todo {
+    width: 400px;
+  }
+
+  .todo-list {
+    width: 400px;
+  }
 }
